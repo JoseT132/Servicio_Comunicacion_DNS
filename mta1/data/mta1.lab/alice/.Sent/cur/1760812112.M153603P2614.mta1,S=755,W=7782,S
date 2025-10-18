@@ -1,0 +1,23 @@
+MIME-Version: 1.0
+Date: Sat, 18 Oct 2025 18:28:31 +0000
+Content-Type: multipart/alternative;
+ boundary="6f753329-047b-4914-b29b-e1000b79f5d8-1"
+From: "Alice" <alice@mta1.lab>
+Message-ID: <172f74fbb9d59a223ad02a194a31a681ad965ce6@mta1.lab>
+TLS-Required: No
+Subject: tilin
+To: bob@mta2.lab
+
+--6f753329-047b-4914-b29b-e1000b79f5d8-1
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+HOLAAAAAAAAA
+--6f753329-047b-4914-b29b-e1000b79f5d8-1
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html><head><meta http-equiv=3D"Content-Type" content=3D"t=
+ext/html; charset=3Dutf-8"></head><body><div>HOLAAAAAAAAA</div></body></h=
+tml>
+--6f753329-047b-4914-b29b-e1000b79f5d8-1--

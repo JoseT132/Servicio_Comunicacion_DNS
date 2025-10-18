@@ -1,0 +1,21 @@
+services:
+  webmail1:
+    volumes:
+      - ./snappy1:/var/lib/snappymail
+    environment:
+      SNAPPYMAIL_DEFAULTS: >
+        { "defaults": {
+            "imap": { "host": "mta1", "port": 993, "secure": "SSL", "verifyCertificate": false },
+            "smtp": { "host": "mta1", "port": 587, "secure": "STARTTLS", "auth": true, "verifyCertificate": false }
+          }
+        }
+  webmail2:
+    volumes:
+      - ./snappy2:/var/lib/snappymail
+    environment:
+      SNAPPYMAIL_DEFAULTS: >
+        { "defaults": {
+            "imap": { "host": "mta2", "port": 993, "secure": "SSL", "verifyCertificate": false },
+            "smtp": { "host": "mta2", "port": 587, "secure": "STARTTLS", "auth": true, "verifyCertificate": false }
+          }
+        }

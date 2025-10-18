@@ -1,0 +1,90 @@
+Return-Path: <>
+Delivered-To: carol@mta1.lab
+Received: from mta1.mta1.lab
+	by mta1.mta1.lab with LMTP
+	id GTcrB3+l8WhaAwAAoZcKkQ
+	(envelope-from <>)
+	for <carol@mta1.lab>; Thu, 16 Oct 2025 20:10:07 -0600
+Received: by mta1.mta1.lab (Postfix)
+	id E82151C1F4; Thu, 16 Oct 2025 20:10:06 -0600 (CST)
+Date: Thu, 16 Oct 2025 20:10:06 -0600 (CST)
+From: Mail Delivery System <MAILER-DAEMON@mta1.mta1.lab>
+Subject: Undelivered Mail Returned to Sender
+To: carol@mta1.lab
+Auto-Submitted: auto-replied
+MIME-Version: 1.0
+Content-Type: multipart/report; report-type=delivery-status;
+	boundary="445A31C1EC.1760667006/mta1.mta1.lab"
+Content-Transfer-Encoding: 7bit
+Message-Id: <20251017021006.E82151C1F4@mta1.mta1.lab>
+
+This is a MIME-encapsulated message.
+
+--445A31C1EC.1760667006/mta1.mta1.lab
+Content-Description: Notification
+Content-Type: text/plain; charset=us-ascii
+
+This is the mail system at host mta1.mta1.lab.
+
+I'm sorry to have to inform you that your message could not
+be delivered to one or more recipients. It's attached below.
+
+For further assistance, please send mail to postmaster.
+
+If you do so, please include this problem report. You can
+delete your own text from the attached returned message.
+
+                   The mail system
+
+<bob@mta2.lab>: Host or domain name not found. Name service error for
+    name=mta2.lab type=AAAA: Host found but no data record of requested type
+
+--445A31C1EC.1760667006/mta1.mta1.lab
+Content-Description: Delivery report
+Content-Type: message/delivery-status
+
+Reporting-MTA: dns; mta1.mta1.lab
+X-Postfix-Queue-ID: 445A31C1EC
+X-Postfix-Sender: rfc822; carol@mta1.lab
+Arrival-Date: Thu, 16 Oct 2025 20:10:05 -0600 (CST)
+
+Final-Recipient: rfc822; bob@mta2.lab
+Original-Recipient: rfc822;bob@mta2.lab
+Action: failed
+Status: 5.4.4
+Diagnostic-Code: X-Postfix; Host or domain name not found. Name service error
+    for name=mta2.lab type=AAAA: Host found but no data record of requested
+    type
+
+--445A31C1EC.1760667006/mta1.mta1.lab
+Content-Description: Undelivered Message
+Content-Type: message/rfc822
+
+Return-Path: <carol@mta1.lab>
+Received: from localhost (localhost [127.0.0.1])
+	by mta1.mta1.lab (Postfix) with ESMTP id 445A31C1EC
+	for <bob@mta2.lab>; Thu, 16 Oct 2025 20:10:05 -0600 (CST)
+MIME-Version: 1.0
+Date: Fri, 17 Oct 2025 02:10:03 +0000
+Content-Type: multipart/alternative;
+ boundary="d78f01fe-06a0-47cb-bba8-f5fc08901180-1"
+From: "carol" <carol@mta1.lab>
+Message-ID: <936652641b3171963dca2d627047ba453b446f5f@mta1.lab>
+TLS-Required: No
+Subject: Test
+To: bob@mta2.lab
+
+--d78f01fe-06a0-47cb-bba8-f5fc08901180-1
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+test
+--d78f01fe-06a0-47cb-bba8-f5fc08901180-1
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html><head><meta http-equiv=3D"Content-Type" content=3D"t=
+ext/html; charset=3Dutf-8"></head><body><div>test</div></body></html>
+--d78f01fe-06a0-47cb-bba8-f5fc08901180-1--
+
+--445A31C1EC.1760667006/mta1.mta1.lab--

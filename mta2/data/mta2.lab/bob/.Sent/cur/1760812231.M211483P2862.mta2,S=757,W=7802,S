@@ -1,0 +1,23 @@
+MIME-Version: 1.0
+Date: Sat, 18 Oct 2025 18:30:30 +0000
+Content-Type: multipart/alternative;
+ boundary="c4646d37-5f87-4e77-b22d-184866e612e6-1"
+From: "Bob Marley" <bob@mta2.lab>
+Message-ID: <eac382b9432c3c2a9a30dab6a86bb3d4e86bafe1@mta2.lab>
+TLS-Required: No
+Subject: TILINA
+To: alice@mta1.lab
+
+--c4646d37-5f87-4e77-b22d-184866e612e6-1
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+hola again
+--c4646d37-5f87-4e77-b22d-184866e612e6-1
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html><head><meta http-equiv=3D"Content-Type" content=3D"t=
+ext/html; charset=3Dutf-8"></head><body><div>hola again</div></body></htm=
+l>
+--c4646d37-5f87-4e77-b22d-184866e612e6-1--

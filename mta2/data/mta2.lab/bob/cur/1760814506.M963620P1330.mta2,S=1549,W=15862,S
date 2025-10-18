@@ -1,0 +1,37 @@
+Return-Path: <alice@mta1.lab>
+Delivered-To: bob@mta2.lab
+Received: from mta2.mta2.lab
+	by mta2.mta2.lab with LMTP
+	id ReUtOarl82gyBQAATCq50Q
+	(envelope-from <alice@mta1.lab>)
+	for <bob@mta2.lab>; Sat, 18 Oct 2025 13:08:26 -0600
+Received: from localhost (localhost [127.0.0.1])
+	by mta2.mta2.lab (Postfix) with ESMTP id D5D714A23
+	for <bob@mta2.lab>; Sat, 18 Oct 2025 13:08:26 -0600 (CST)
+Authentication-Results: mta2.mta2.lab; dmarc=none (p=none dis=none) header.from=mta1.lab
+Received-SPF: None (mailfrom) identity=mailfrom; client-ip=172.18.0.3; helo=mta1.mta1.lab; envelope-from=alice@mta1.lab; receiver=mta2.lab 
+Received: from mta1.mta1.lab (mta1.mail-lab_default [172.18.0.3])
+	by mta2.mta2.lab (Postfix) with ESMTPS id 5B72D4A20
+	for <bob@mta2.lab>; Sat, 18 Oct 2025 13:08:14 -0600 (CST)
+MIME-Version: 1.0
+Date: Sat, 18 Oct 2025 19:08:08 +0000
+Content-Type: multipart/alternative;
+ boundary="16ced852-b981-40c2-82d3-46e86763bb8b-1"
+From: "Alice" <alice@mta1.lab>
+Message-ID: <1b4349670ca4db8d1a2df25d0a92b853bf55367f@mta1.lab>
+TLS-Required: No
+Subject: Test reversa mta1 a mta2
+To: bob@mta2.lab
+
+--16ced852-b981-40c2-82d3-46e86763bb8b-1
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+lol
+--16ced852-b981-40c2-82d3-46e86763bb8b-1
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html><head><meta http-equiv=3D"Content-Type" content=3D"t=
+ext/html; charset=3Dutf-8"></head><body><div>lol</div></body></html>
+--16ced852-b981-40c2-82d3-46e86763bb8b-1--

@@ -1,0 +1,37 @@
+Return-Path: <bob@mta2.lab>
+Delivered-To: alice@mta1.lab
+Received: from mta1.mta1.lab
+	by mta1.mta1.lab with LMTP
+	id DbhXM2bl82i6BAAAoZcKkQ
+	(envelope-from <bob@mta2.lab>)
+	for <alice@mta1.lab>; Sat, 18 Oct 2025 13:07:18 -0600
+Received: from localhost (localhost [127.0.0.1])
+	by mta1.mta1.lab (Postfix) with ESMTP id BBB444A18
+	for <alice@mta1.lab>; Sat, 18 Oct 2025 13:07:18 -0600 (CST)
+Authentication-Results: mta1.mta1.lab; dmarc=none (p=none dis=none) header.from=mta2.lab
+Received-SPF: None (mailfrom) identity=mailfrom; client-ip=172.18.0.4; helo=mta2.mta2.lab; envelope-from=bob@mta2.lab; receiver=mta1.lab 
+Received: from mta2.mta2.lab (mta2.mail-lab_default [172.18.0.4])
+	by mta1.mta1.lab (Postfix) with ESMTPS id 33CD24A0B
+	for <alice@mta1.lab>; Sat, 18 Oct 2025 13:06:55 -0600 (CST)
+MIME-Version: 1.0
+Date: Sat, 18 Oct 2025 19:06:48 +0000
+Content-Type: multipart/alternative;
+ boundary="564a1d90-27b2-4bf6-9cd7-87fa2e0640d2-1"
+From: "Bob Marley" <bob@mta2.lab>
+Message-ID: <32f3f101295b28f756eaa052886869c8e1d35a4e@mta2.lab>
+TLS-Required: No
+Subject: TILINI
+To: alice@mta1.lab
+
+--564a1d90-27b2-4bf6-9cd7-87fa2e0640d2-1
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+xd
+--564a1d90-27b2-4bf6-9cd7-87fa2e0640d2-1
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html><head><meta http-equiv=3D"Content-Type" content=3D"t=
+ext/html; charset=3Dutf-8"></head><body><div>xd</div></body></html>
+--564a1d90-27b2-4bf6-9cd7-87fa2e0640d2-1--

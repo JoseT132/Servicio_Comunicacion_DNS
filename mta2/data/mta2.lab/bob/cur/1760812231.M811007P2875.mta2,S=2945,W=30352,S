@@ -1,0 +1,90 @@
+Return-Path: <>
+Delivered-To: bob@mta2.lab
+Received: from mta2.mta2.lab
+	by mta2.mta2.lab with LMTP
+	id fW4xMMfc82g7CwAATCq50Q
+	(envelope-from <>)
+	for <bob@mta2.lab>; Sat, 18 Oct 2025 12:30:31 -0600
+Received: by mta2.mta2.lab (Postfix)
+	id B7F7F4A99; Sat, 18 Oct 2025 12:30:31 -0600 (CST)
+Date: Sat, 18 Oct 2025 12:30:31 -0600 (CST)
+From: Mail Delivery System <MAILER-DAEMON@mta2.mta2.lab>
+Subject: Undelivered Mail Returned to Sender
+To: bob@mta2.lab
+Auto-Submitted: auto-replied
+MIME-Version: 1.0
+Content-Type: multipart/report; report-type=delivery-status;
+	boundary="710264A90.1760812231/mta2.mta2.lab"
+Content-Transfer-Encoding: 7bit
+Message-Id: <20251018183031.B7F7F4A99@mta2.mta2.lab>
+
+This is a MIME-encapsulated message.
+
+--710264A90.1760812231/mta2.mta2.lab
+Content-Description: Notification
+Content-Type: text/plain; charset=us-ascii
+
+This is the mail system at host mta2.mta2.lab.
+
+I'm sorry to have to inform you that your message could not
+be delivered to one or more recipients. It's attached below.
+
+For further assistance, please send mail to postmaster.
+
+If you do so, please include this problem report. You can
+delete your own text from the attached returned message.
+
+                   The mail system
+
+<alice@mta1.lab>: Host or domain name not found. Name service error for
+    name=mta1.lab type=AAAA: Host not found
+
+--710264A90.1760812231/mta2.mta2.lab
+Content-Description: Delivery report
+Content-Type: message/delivery-status
+
+Reporting-MTA: dns; mta2.mta2.lab
+X-Postfix-Queue-ID: 710264A90
+X-Postfix-Sender: rfc822; bob@mta2.lab
+Arrival-Date: Sat, 18 Oct 2025 12:30:31 -0600 (CST)
+
+Final-Recipient: rfc822; alice@mta1.lab
+Original-Recipient: rfc822;alice@mta1.lab
+Action: failed
+Status: 5.4.4
+Diagnostic-Code: X-Postfix; Host or domain name not found. Name service error
+    for name=mta1.lab type=AAAA: Host not found
+
+--710264A90.1760812231/mta2.mta2.lab
+Content-Description: Undelivered Message
+Content-Type: message/rfc822
+
+Return-Path: <bob@mta2.lab>
+Received: from localhost (localhost [127.0.0.1])
+	by mta2.mta2.lab (Postfix) with ESMTP id 710264A90
+	for <alice@mta1.lab>; Sat, 18 Oct 2025 12:30:31 -0600 (CST)
+MIME-Version: 1.0
+Date: Sat, 18 Oct 2025 18:30:30 +0000
+Content-Type: multipart/alternative;
+ boundary="c4646d37-5f87-4e77-b22d-184866e612e6-1"
+From: "Bob Marley" <bob@mta2.lab>
+Message-ID: <eac382b9432c3c2a9a30dab6a86bb3d4e86bafe1@mta2.lab>
+TLS-Required: No
+Subject: TILINA
+To: alice@mta1.lab
+
+--c4646d37-5f87-4e77-b22d-184866e612e6-1
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+hola again
+--c4646d37-5f87-4e77-b22d-184866e612e6-1
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html><head><meta http-equiv=3D"Content-Type" content=3D"t=
+ext/html; charset=3Dutf-8"></head><body><div>hola again</div></body></htm=
+l>
+--c4646d37-5f87-4e77-b22d-184866e612e6-1--
+
+--710264A90.1760812231/mta2.mta2.lab--

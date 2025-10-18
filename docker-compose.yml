@@ -1,0 +1,112 @@
+services:
+  vpn:
+    image: linuxserver/wireguard:latest
+    container_name: vpn
+    cap_add: [ "NET_ADMIN", "SYS_MODULE" ]
+    environment:
+      - TZ=America/Guatemala
+      - PEERS=lab
+      - ALLOWEDIPS=0.0.0.0/0
+      # Sin INTERNAL_SUBNET para evitar choques de IP
+    volumes:
+      - ./wg:/config
+      # En Windows/WSL este path puede no existir; no es crítico para el lab
+      #- /lib/modules:/lib/modules:ro
+    restart: unless-stopped
+
+  mta1:
+    image: ghcr.io/docker-mailserver/docker-mailserver:latest
+    container_name: mta1
+    hostname: mta1
+    domainname: mta1.lab
+    environment:
+      - ENABLE_CLAMAV=0
+      - ENABLE_SPAMASSASSIN=0
+      - ENABLE_FAIL2BAN=0
+      - ENABLE_POSTGREY=0
+      - ONE_DIR=1
+      - DMS_DEBUG=0
+      - SSL_TYPE=manual
+      - SSL_CERT_PATH=/etc/letsencrypt/live/mta1.lab/fullchain.pem
+      - SSL_KEY_PATH=/etc/letsencrypt/live/mta1.lab/privkey.pem
+      - ENABLE_SASLAUTHD=0
+      - ENABLE_POP3=0
+      - ENABLE_IMAP=1
+      - SMTP_ONLY=0
+      - POSTMASTER_ADDRESS=postmaster@mta1.lab
+      - TZ=America/Guatemala
+      - POSTFIX_INET_PROTOCOLS=ipv4
+    volumes:
+      - ./mta1/config:/tmp/docker-mailserver
+      - ./mta1/data:/var/mail
+      - ./mta1/ssl:/etc/letsencrypt/live/mta1.lab
+    restart: unless-stopped
+    depends_on: [ vpn ]
+    networks:
+      default:
+        aliases:
+          - mta1.lab
+
+  mta2:
+    image: ghcr.io/docker-mailserver/docker-mailserver:latest
+    container_name: mta2
+    hostname: mta2
+    domainname: mta2.lab
+    environment:
+      - ENABLE_CLAMAV=0
+      - ENABLE_SPAMASSASSIN=0
+      - ENABLE_FAIL2BAN=0
+      - ENABLE_POSTGREY=0
+      - ONE_DIR=1
+      - DMS_DEBUG=0
+      - SSL_TYPE=manual
+      - SSL_CERT_PATH=/etc/letsencrypt/live/mta2.lab/fullchain.pem
+      - SSL_KEY_PATH=/etc/letsencrypt/live/mta2.lab/privkey.pem
+      - ENABLE_SASLAUTHD=0
+      - ENABLE_POP3=0
+      - ENABLE_IMAP=1
+      - SMTP_ONLY=0
+      - POSTMASTER_ADDRESS=postmaster@mta2.lab
+      - TZ=America/Guatemala
+      - POSTFIX_INET_PROTOCOLS=ipv4
+    volumes:
+      - ./mta2/config:/tmp/docker-mailserver
+      - ./mta2/data:/var/mail
+      - ./mta2/ssl:/etc/letsencrypt/live/mta2.lab
+    restart: unless-stopped
+    depends_on: [ vpn ]
+    networks:
+      default:
+        aliases:
+          - mta2.lab
+
+  webmail1:
+    image: ghcr.io/the-djmaze/snappymail:latest
+    container_name: webmail1
+    environment:
+      - TZ=America/Guatemala
+      # Usa nombres de servicio (Docker DNS) en lugar de IPs
+      - SNAPPYMAIL_DEFAULTS={"defaults":{"smtp":{"host":"mta1","port":587,"secure":false,"auth":true},"imap":{"host":"mta1","port":993,"secure":true}}}
+    volumes:
+      - ./webmail1/data:/var/lib/snappymail
+    ports:
+      - "18088:8888"
+    depends_on: [ mta1 ]
+    restart: unless-stopped
+
+  webmail2:
+    image: ghcr.io/the-djmaze/snappymail:latest
+    container_name: webmail2
+    environment:
+      - TZ=America/Guatemala
+      - SNAPPYMAIL_DEFAULTS={"defaults":{"smtp":{"host":"mta2","port":587,"secure":false,"auth":true},"imap":{"host":"mta2","port":993,"secure":true}}}
+    volumes:
+      - ./webmail2/data:/var/lib/snappymail
+    ports:
+      - "18090:8888"
+    depends_on: [ mta2 ]
+    restart: unless-stopped
+
+networks:
+  default:
+    name: mail-lab_default

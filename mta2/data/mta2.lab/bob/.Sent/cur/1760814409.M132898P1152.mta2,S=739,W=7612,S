@@ -1,0 +1,22 @@
+MIME-Version: 1.0
+Date: Sat, 18 Oct 2025 19:06:48 +0000
+Content-Type: multipart/alternative;
+ boundary="564a1d90-27b2-4bf6-9cd7-87fa2e0640d2-1"
+From: "Bob Marley" <bob@mta2.lab>
+Message-ID: <32f3f101295b28f756eaa052886869c8e1d35a4e@mta2.lab>
+TLS-Required: No
+Subject: TILINI
+To: alice@mta1.lab
+
+--564a1d90-27b2-4bf6-9cd7-87fa2e0640d2-1
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+xd
+--564a1d90-27b2-4bf6-9cd7-87fa2e0640d2-1
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html><head><meta http-equiv=3D"Content-Type" content=3D"t=
+ext/html; charset=3Dutf-8"></head><body><div>xd</div></body></html>
+--564a1d90-27b2-4bf6-9cd7-87fa2e0640d2-1--

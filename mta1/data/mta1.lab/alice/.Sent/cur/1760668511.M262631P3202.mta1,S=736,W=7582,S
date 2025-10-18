@@ -1,0 +1,22 @@
+MIME-Version: 1.0
+Date: Fri, 17 Oct 2025 02:35:11 +0000
+Content-Type: multipart/alternative;
+ boundary="0abf48ff-aa13-4883-ac83-806457cf0b08-1"
+From: "Alice" <alice@mta1.lab>
+Message-ID: <2c48cac55bd6ec97a03134de6d88b8b2586f736e@mta1.lab>
+TLS-Required: No
+Subject: test
+To: bob@mta2.lab
+
+--0abf48ff-aa13-4883-ac83-806457cf0b08-1
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+test
+--0abf48ff-aa13-4883-ac83-806457cf0b08-1
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html><head><meta http-equiv=3D"Content-Type" content=3D"t=
+ext/html; charset=3Dutf-8"></head><body><div>test</div></body></html>
+--0abf48ff-aa13-4883-ac83-806457cf0b08-1--

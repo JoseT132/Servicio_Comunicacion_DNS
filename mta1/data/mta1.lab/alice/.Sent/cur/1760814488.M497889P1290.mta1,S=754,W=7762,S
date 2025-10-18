@@ -1,0 +1,22 @@
+MIME-Version: 1.0
+Date: Sat, 18 Oct 2025 19:08:08 +0000
+Content-Type: multipart/alternative;
+ boundary="16ced852-b981-40c2-82d3-46e86763bb8b-1"
+From: "Alice" <alice@mta1.lab>
+Message-ID: <1b4349670ca4db8d1a2df25d0a92b853bf55367f@mta1.lab>
+TLS-Required: No
+Subject: Test reversa mta1 a mta2
+To: bob@mta2.lab
+
+--16ced852-b981-40c2-82d3-46e86763bb8b-1
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+lol
+--16ced852-b981-40c2-82d3-46e86763bb8b-1
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html><head><meta http-equiv=3D"Content-Type" content=3D"t=
+ext/html; charset=3Dutf-8"></head><body><div>lol</div></body></html>
+--16ced852-b981-40c2-82d3-46e86763bb8b-1--
